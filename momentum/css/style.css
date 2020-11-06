@@ -1,0 +1,222 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Caveat', cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  color: white;
+  background-size: cover; 
+  background-position: center center;
+  transition: background-image 1s ease-in;
+}
+
+body:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,.5);
+  z-index: -1;
+}
+
+.time {
+  font-size: 8rem;
+  background-image: url(../assets/images/overlay.png);
+  border-radius: 5%;
+}
+
+h1 {
+  margin-bottom: 3rem;
+}
+
+h2 {
+  margin-bottom: 0.5rem;
+}
+
+.month {
+  font-size: 2rem;
+  text-shadow: 0px 0px 10px rgb(0 0 0);
+}
+
+.greeting, .name, h2 {
+  text-shadow: 0px 0px 10px rgb(0 0 0);
+}
+
+.btn, .btnQuote {
+  width: 60px;
+  height: 60px;
+  border: 0;
+  background: url(../assets/images/refresh-arrows.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 10px;
+  transition: 1s ease; 
+}
+
+.btnQuote {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.btn:hover, .btnQuote:hover {
+  /* transform: scale(1.02); */
+  /* filter: drop-shadow(0px 10px 5px black); */
+  transform: rotate(-360deg);
+  cursor: pointer;
+  transition: 2s ease; 
+}
+
+.btn:active,
+.btn:focus,
+.btnQuote:active,
+.btnQuote:focus {
+  outline: 0;
+}
+
+.btn:active, .btnQuote:active {
+  transform: scale(1.02);
+  
+}
+
+span, .focus {
+  display: inline-block;
+  min-width: 100px;
+}
+
+.name, .focus, .city {
+  border-bottom: 1px solid white;
+  transition: 1s ease; 
+}
+
+.name:hover, .focus:hover, .city:hover {
+  transform: scale(1.1); 
+}
+
+.quote, .weather {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 25px;
+  width: 30%;
+  height: 200px;
+  margin: 0;
+  background-image: url(../assets/images/overlay.png);
+  border-radius: 5%;
+  padding: 10px;
+}
+
+.quote {
+  width: 30%;
+}
+
+.weather {
+  left: auto;
+  right: 10px;
+  width: 20%;
+}
+
+.weather-icon {
+  font-size: 80px;
+  margin-left: 10px;
+}
+
+.quote figcaption,
+.quote blockquote {
+  margin: 10px;
+}
+
+.quote figcaption {
+  text-align: right;
+}
+
+blockquote {
+  text-align: initial;
+}
+
+.temperature, .humidity, .windSpeed, .weatherDescription {
+  text-align: left;
+}
+
+.city {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.blockTemp {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .time {
+    font-size: 2rem;
+  }
+
+  .quote, .weather {
+    position: initial;
+    width: 300px;
+  }
+
+  h1, .month, .time, h2 {
+    margin-bottom: 1rem;
+  }
+
+  .month, h1 {
+    font-size: 1.5rem;
+  }
+
+  h2, .quote, .weather {
+    font-size: 1.2rem;
+  }
+  .btnQuote {
+    display: inline;
+  }
+  
+  .quote blockquote {
+    margin: 0;
+  }
+
+  .weather-icon {
+    font-size: 20px;
+  }
+
+  .btn {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 320px) {
+  /* body {
+    height: auto;
+  }
+
+  body:after {
+    max-height: 700px;
+  } */
+
+  .quote, .weather {
+    width: 270px;
+  }
+
+  .btn, .btnQuote {
+    width: 25px;
+    height: 25px;
+  }
+
+  .month, h1, .city, h2, .quote, .weather {
+    font-size: 1rem;
+  }
+}

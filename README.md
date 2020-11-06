@@ -1,3 +1,3 @@
-# viklysx-JS2020Q3
-Private repository for @viklysx
-# momentum
+Таск, выполненный изначально в приватном репозитории школы RSSchool
+
+https://viklysx.github.io/momentum
